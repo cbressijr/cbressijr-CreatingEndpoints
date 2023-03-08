@@ -16,17 +16,16 @@ public class JavalinSingleton {
      */
     public static Javalin getInstance(){
         Javalin app = Javalin.create();
-        app.start(9000);
 
     // HTTP GET REQUEST to http://localhost:9000/get-request
-        app.get("/get-request", ctx -> {
+        app.get("/hello", ctx -> {
         //logic to be executed when this endpoint is hit
         ctx.result("Hello World");
     });
 
 
     // HTTP POST REQUEST to http://localhost:9000/post-request
-        app.post("/post-request", ctx -> {
+        app.post("/hello", ctx -> {
         //logic to be executed when this endpoint is hit
         ctx.result("Hello World");
     });
